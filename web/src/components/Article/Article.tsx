@@ -11,7 +11,7 @@ const Article = ({ article }: Props) => {
           <header>
             <h2><Link to={routes.article({ id: article.id })}>{article.title}</Link></h2>
           </header>
-          <p>{article.body}</p>
+          <div>{article.body}</div>
           <div>Posted at: {article.createdAt}</div>
         </article>
   )

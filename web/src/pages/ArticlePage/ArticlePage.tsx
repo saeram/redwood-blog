@@ -1,5 +1,5 @@
 import { Metadata } from '@redwoodjs/web'
-import ArticleCell from 'src/components/ArticlesCell'
+import ArticleCell from 'src/components/ArticleCell'
 
 interface Props {
   id: number
@@ -9,7 +9,7 @@ const ArticlePage = ({ id }: Props) => {
     <>
       <Metadata title="Article" description="Article page" />
 
-      <ArticleCell id={id} />
+      <ArticleCell id = {id} />
     </>
   )
 }

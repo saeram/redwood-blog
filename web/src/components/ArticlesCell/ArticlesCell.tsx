@@ -8,10 +8,7 @@ import type {
 } from '@redwoodjs/web'
 import { Link, routes } from '@redwoodjs/router'
 
-export const QUERY: TypedDocumentNode<
-  ArticlesQuery,
-  ArticlesQueryVariables
-> = gql`
+export const QUERY = gql`
   query ArticlesQuery {
     articles: posts {
       id
@@ -27,7 +24,7 @@ export const Loading = () => <div>Loading...</div>
 export const Empty = () => <div>Empty</div>
 
 export const Failure = ({ error }: CellFailureProps) => (
-  <div style={{ color: 'red' }}>Error: {error?.message}</div>
+  <div style={{ color: 'red' }}>Error: {error.message}</div>
 )
 
 export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
